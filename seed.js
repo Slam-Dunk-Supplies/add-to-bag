@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const faker = require('faker');
 const db = require('./database/index.js');
 
