@@ -12,6 +12,7 @@ const itemSchema = mongoose.Schema({
   price: Number,
   heart: Boolean,
   sizes: Array,
+  color: String,
 });
 
 const Item = mongoose.model('Item', itemSchema);
