@@ -30,6 +30,7 @@ class HolidayModal extends React.Component {
     const { show } = this.state;
     const partOne = 'Check out our ';
     const partTwo = ' for more details';
+    const sentence = 'Enjoy free returns or exchanges within 90 days for purchases made between 11/15 and 1/15. Some restrictions apply.';
     return (
       <div>
         <button
@@ -58,6 +59,7 @@ class HolidayModal extends React.Component {
             &times;
           </button>
           <h1> FREE 90 DAY EXTENDED HOLIDAY RETURNS &amp; EXCHANGES </h1>
+          <small> {sentence} </small>
           <p>
             {partOne}
             <a href="this is a fake link" style={{ color: 'black' }}>Return Policy</a>
