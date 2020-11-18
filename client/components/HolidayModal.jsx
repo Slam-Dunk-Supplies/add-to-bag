@@ -59,7 +59,9 @@ class HolidayModal extends React.Component {
             &times;
           </button>
           <h1> FREE 90 DAY EXTENDED HOLIDAY RETURNS &amp; EXCHANGES </h1>
-          <small> {sentence} </small>
+          <small>
+            {sentence}
+          </small>
           <p>
             {partOne}
             <a href="this is a fake link" style={{ color: 'black' }}>Return Policy</a>
