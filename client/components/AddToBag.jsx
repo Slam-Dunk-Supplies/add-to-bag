@@ -2,6 +2,7 @@
 import React from 'react';
 import Axios from 'axios';
 import FinanceModal from './FinanceModal.jsx';
+import CreatorsModal from './CreatorsModal.jsx';
 
 class AddToBag extends React.Component {
   constructor(props) {
@@ -55,6 +56,9 @@ class AddToBag extends React.Component {
         </div>
         <div>
           <FinanceModal />
+        </div>
+        <div>
+          <CreatorsModal />
         </div>
       </section>
     );
