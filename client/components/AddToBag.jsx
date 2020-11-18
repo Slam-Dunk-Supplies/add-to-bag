@@ -1,5 +1,7 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import Axios from 'axios';
+import FinanceModal from './FinanceModal.jsx';
 
 class AddToBag extends React.Component {
   constructor(props) {
@@ -50,6 +52,9 @@ class AddToBag extends React.Component {
         <div>
           <button type="button"> ADD TO BAG </button>
           <button type="button"> Heart emoji </button>
+        </div>
+        <div>
+          <FinanceModal />
         </div>
       </section>
     );
