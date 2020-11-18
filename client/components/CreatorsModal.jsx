@@ -1,8 +1,6 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
-
-const faker = require('faker');
 
 class FinanceModal extends React.Component {
   constructor(props) {
@@ -30,6 +28,7 @@ class FinanceModal extends React.Component {
 
   render() {
     const { show } = this.state;
+    const paragraph = ' for the Creators Club and get free shipping and free returns or exchanges on any order.';
     return (
       <div>
         <button
@@ -37,7 +36,7 @@ class FinanceModal extends React.Component {
           onClick={this.showModal}
           className="modal-button"
         >
-          PAY OVER TIME IN INTEREST-FREE INSTALLMENTS WITH AFFIRM, KLARNA OR AFTERPAY
+          JOIN CREATORS CLUB TO GET UNLIMITED FREE SHIPPING, RETURNS, &amp; EXCHANGES
         </button>
         <div
           id="myModal"
@@ -57,18 +56,10 @@ class FinanceModal extends React.Component {
           >
             &times;
           </button>
-          <h1> PAYING IN INSTALLMENTS </h1>
+          <h1> JOIN CREATORS CLUB TO GET UNLIMITED FREE SHIPPING, RETURNS, &amp; EXCHANGES </h1>
           <p>
-            {faker.lorem.paragraph()}
-          </p>
-          <p>
-            {faker.lorem.paragraphs()}
-          </p>
-          <p>
-            {faker.lorem.paragraph()}
-          </p>
-          <p>
-            {faker.lorem.paragraph()}
+            <a href="this is a fake link" style={{ color: 'black' }}>Sign up</a>
+            {paragraph}
           </p>
         </div>
       </div>
