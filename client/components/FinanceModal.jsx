@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable max-len */
 import React from 'react';
 
 const faker = require('faker');
