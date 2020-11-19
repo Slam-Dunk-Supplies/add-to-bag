@@ -60,7 +60,7 @@ class AddToBag extends React.Component {
           <SizeOutOfStockModal sizes={sizes} />
         </div>
         <div>
-          <AddToBagModal />
+          <AddToBagModal item={item} />
           <button type="button"> Heart emoji </button>
         </div>
         <div>
