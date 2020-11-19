@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-
-const faker = require('faker');
+import PropTypes from 'prop-types';
 
 class AddToBagModal extends React.Component {
   constructor(props) {
@@ -30,6 +29,11 @@ class AddToBagModal extends React.Component {
 
   render() {
     const { show } = this.state;
+    const { item } = this.props;
+    const price = `$${item.price}`;
+    const color = `Color: ${item.color}`;
+    const total = `Total Product Cost: $${item.price}`;
+    const grandTotal = `Total $${item.price}`;
     return (
       <div>
         <button
@@ -59,17 +63,51 @@ class AddToBagModal extends React.Component {
           </button>
           <h1> SUCCESSFULLY ADDED TO BAG! </h1>
           <div className="product">
-            item name
+            <h4>
+              {item.name}
+            </h4>
+            <div>
+              {price}
+            </div>
+            <div>
+              {color}
+            </div>
+            <div>
+              Size: TODO
+            </div>
+            <div>
+              Quantity: 1
+            </div>
           </div>
           <div className="summary">
             <h4>
               YOUR BAG
             </h4>
+            <div>
+              1 item
+            </div>
+            <div>
+              {total}
+            </div>
+            Total Delivery Cost: FREE
           </div>
+          <div>
+            {grandTotal}
+          </div>
+          <button type="button" className="addtobag-modal-button">
+            VIEW BAG &rarr;
+          </button>
+          <button type="button">
+            CHECKOUT &rarr;
+          </button>
         </div>
       </div>
     );
   }
 }
+
+AddToBagModal.propTypes = {
+  item: PropTypes.objectOf(PropTypes.string).isRequired,
+};
 
 export default AddToBagModal;
