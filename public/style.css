@@ -1,3 +1,81 @@
+/* --- CONTAINER --- */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  font-family: Helvetica, Arial, sans-serif;
+  align-content: space-between;
+  margin: 20px;
+}
+
+/* --- ITEM INFORMATION --- */
+.descrition {
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.category {
+  margin-bottom: 50px;
+}
+
+.item-name {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-style: italic;
+}
+
+.item-color {
+  font-weight: lighter;
+}
+
+.item-price {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* --- MINI CONTAINERS --- */
+.mini-container {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.heart {
+  height: 40px;
+  width: 45px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.heart:hover {
+  cursor: pointer;
+}
+
+/* --- PROMOTIONS --- */
+.promotions {
+  flex-wrap: wrap;
+}
+
+/* --- SIZE BUTTON --- */
+.size-button {
+  color: black;
+  background-color: white;
+  border: 1px solid grey;
+  width: 50px;
+  height: 25px;
+  text-transform: uppercase;
+}
+
+.size-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+
+/* --- MODAL --- */
 .modal {
   position: fixed;
   z-index: 1;
@@ -14,6 +92,7 @@
   cursor: pointer;
 }
 
+/* --- CONTENT OF MODAL --- */
 .modal-content {
   z-index: 2;
   position: fixed;
@@ -53,10 +132,10 @@
   cursor: pointer;
 }
 
+/* --- MODAL BUTTONS --- */
 .modal-button {
   text-decoration: underline;
   border: none;
-  color: white;
   text-align: center;
   display: inline-block;
   color: black;
@@ -66,6 +145,11 @@
 .addtobag-modal-button {
   color: white;
   background-color: black;
+  height: 40px;
+  overflow: hidden;
+  flex: 1 1 auto;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .addtobag-modal-button:hover {
@@ -79,6 +163,8 @@
   cursor: pointer;
 }
 
+
+/* --- IMAGES --- */
 .img {
   height: 250px;
   justify-content: right;
