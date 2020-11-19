@@ -35,42 +35,54 @@ class AddToBag extends React.Component {
     const { item } = this.state;
     const { sizes } = item;
     return (
-      <section>
-        <h3>
-          {item.category}
-        </h3>
-        <h2>
-          {item.name}
-        </h2>
-        <h3>
-          {item.color}
-        </h3>
-        <h2>
-          {`$${item.price}`}
-        </h2>
-        <div>
-          {sizes.map((size) => (
-            <button type="button">
-              {size}
-            </button>
-          ))}
+      <section className="container">
+        <div className="description">
+          <div className="item-category">
+            {item.category}
+          </div>
+          <h1 className="item-name">
+            {item.name}
+          </h1>
+          <h3 className="item-color">
+            {item.color}
+          </h3>
+          <h4 className="item-price">
+            {`$${item.price}`}
+          </h4>
+          <div>
+            {sizes.map((size) => (
+              <button
+                type="button"
+                className="size-button"
+              >
+                {size}
+              </button>
+            ))}
+          </div>
         </div>
-        <div>
+        <div className="mini-container">
           <SizeGuideModal />
           <SizeOutOfStockModal sizes={sizes} />
         </div>
-        <div>
+        <div className="mini-container">
           <AddToBagModal item={item} />
-          <button type="button"> Heart emoji </button>
+          <button
+            type="button"
+            className="heart"
+          >
+            &#x2661;
+          </button>
         </div>
-        <div>
-          <FinanceModal />
-        </div>
-        <div>
-          <CreatorsModal />
-        </div>
-        <div>
-          <HolidayModal />
+        <div className="promotions">
+          <div>
+            <FinanceModal />
+          </div>
+          <div>
+            <CreatorsModal />
+          </div>
+          <div>
+            <HolidayModal />
+          </div>
         </div>
       </section>
     );
