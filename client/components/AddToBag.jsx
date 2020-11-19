@@ -4,6 +4,9 @@ import Axios from 'axios';
 import FinanceModal from './FinanceModal.jsx';
 import CreatorsModal from './CreatorsModal.jsx';
 import HolidayModal from './HolidayModal.jsx';
+import SizeGuideModal from './SizeGuideModal.jsx';
+import SizeOutOfStockModal from './SizeOutOfStockModal.jsx';
+import AddToBagModal from './AddToBagModal.jsx';
 
 class AddToBag extends React.Component {
   constructor(props) {
@@ -30,6 +33,7 @@ class AddToBag extends React.Component {
 
   render() {
     const { item } = this.state;
+    const { sizes } = item;
     return (
       <section>
         <h3>
@@ -45,14 +49,18 @@ class AddToBag extends React.Component {
           {`$${item.price}`}
         </h2>
         <div>
-          {item.sizes.map((size) => (
+          {sizes.map((size) => (
             <button type="button">
               {size}
             </button>
           ))}
         </div>
         <div>
-          <button type="button"> ADD TO BAG </button>
+          <SizeGuideModal />
+          <SizeOutOfStockModal sizes={sizes} />
+        </div>
+        <div>
+          <AddToBagModal />
           <button type="button"> Heart emoji </button>
         </div>
         <div>
