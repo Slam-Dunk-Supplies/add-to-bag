@@ -62,7 +62,7 @@ class FinanceModal extends React.Component {
             {faker.lorem.paragraph()}
           </p>
           <p>
-            {faker.lorem.paragraphs()}
+            {faker.lorem.paragraph()}
           </p>
           <p>
             {faker.lorem.paragraph()}
