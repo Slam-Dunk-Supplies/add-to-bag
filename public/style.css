@@ -38,6 +38,7 @@
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 10px 0 10px 0;
 }
 
 .heart {
@@ -55,7 +56,25 @@
 
 /* --- PROMOTIONS --- */
 .promotions {
+  margin: 10px 0 10px 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+
+.finance {
   flex-wrap: wrap;
+  align-self: flex-start;
+  margin: 5px 0 5px 0;
+}
+
+.creators {
+  margin: 5px 0 5px 0;
+}
+
+.holiday {
+  margin: 5px 0 5px 0;
 }
 
 /* --- SIZE BUTTON --- */
@@ -148,8 +167,9 @@
   height: 40px;
   overflow: hidden;
   flex: 1 1 auto;
+  flex-shrink: 3;
   text-overflow: ellipsis;
-  width: 100%;
+  max-width: 500px;
 }
 
 .addtobag-modal-button:hover {
