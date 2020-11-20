@@ -16,6 +16,7 @@ class AddToBag extends React.Component {
         sizes: [],
       },
     };
+    this.getNewItem = this.getNewItem.bind(this);
   }
 
   componentDidMount() {
@@ -54,6 +55,7 @@ class AddToBag extends React.Component {
               <button
                 type="button"
                 className="size-button"
+                key={size}
               >
                 {size}
               </button>
