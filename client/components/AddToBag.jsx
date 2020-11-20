@@ -74,13 +74,13 @@ class AddToBag extends React.Component {
           </button>
         </div>
         <div className="promotions">
-          <div>
+          <div className="finance">
             <FinanceModal />
           </div>
-          <div>
+          <div className="creators">
             <CreatorsModal />
           </div>
-          <div>
+          <div className="holiday">
             <HolidayModal />
           </div>
         </div>
