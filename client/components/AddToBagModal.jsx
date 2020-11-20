@@ -62,44 +62,48 @@ class AddToBagModal extends React.Component {
             &times;
           </button>
           <h1> SUCCESSFULLY ADDED TO BAG! </h1>
-          <div className="product">
-            <h4>
-              {item.name}
-            </h4>
-            <div>
-              {price}
+          <div className="product-summary">
+            <div className="product">
+              <h4>
+                {item.name}
+              </h4>
+              <div>
+                {price}
+              </div>
+              <div>
+                {color}
+              </div>
+              <div>
+                Size: unknown
+              </div>
+              <div>
+                Quantity: 1
+              </div>
             </div>
-            <div>
-              {color}
-            </div>
-            <div>
-              Size: TODO
-            </div>
-            <div>
-              Quantity: 1
+            <div className="summary">
+              <h4>
+                YOUR BAG
+              </h4>
+              <div>
+                1 item
+              </div>
+              <div>
+                {total}
+              </div>
+              Total Delivery Cost: FREE
+              <div>
+                {grandTotal}
+              </div>
+              <div className="addtobag-checkout">
+                <button type="button" className="addtobag-modal-button">
+                  VIEW BAG &rarr;
+                </button>
+                <button type="button" className="checkout-button">
+                  CHECKOUT &rarr;
+                </button>
+              </div>
             </div>
           </div>
-          <div className="summary">
-            <h4>
-              YOUR BAG
-            </h4>
-            <div>
-              1 item
-            </div>
-            <div>
-              {total}
-            </div>
-            Total Delivery Cost: FREE
-          </div>
-          <div>
-            {grandTotal}
-          </div>
-          <button type="button" className="addtobag-modal-button">
-            VIEW BAG &rarr;
-          </button>
-          <button type="button">
-            CHECKOUT &rarr;
-          </button>
         </div>
       </div>
     );
