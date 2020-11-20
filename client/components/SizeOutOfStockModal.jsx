@@ -63,7 +63,7 @@ class SizeOutOfStockModal extends React.Component {
           >
             &times;
           </button>
-          <div>
+          <div className="stock-modal">
             <h1> FIND MY SIZE </h1>
             <text>
               {first}
@@ -71,11 +71,16 @@ class SizeOutOfStockModal extends React.Component {
             <h4>
               SIZE &#42;
             </h4>
-            {sizes.map((size) => (
-              <button type="button">
-                {size}
-              </button>
-            ))}
+            <div>
+              {sizes.map((size) => (
+                <button
+                  type="button"
+                  className="size-button"
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
           </div>
           <div>
             <input
@@ -104,7 +109,10 @@ class SizeOutOfStockModal extends React.Component {
             </label>
           </div>
           <div>
-            <button type="button">
+            <button
+              type="button"
+              className="sign-up-button"
+            >
               SIGN UP &rarr;
             </button>
           </div>
