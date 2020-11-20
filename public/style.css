@@ -8,7 +8,7 @@
 }
 
 /* --- ITEM INFORMATION --- */
-.descrition {
+.description {
   font-weight: lighter;
   font-size: 14px;
 }
@@ -52,15 +52,16 @@
 
 .heart:hover {
   cursor: pointer;
+  font-weight: bolder;
+  color: grey;
+  font-size: 110%;
 }
 
 /* --- PROMOTIONS --- */
 .promotions {
   margin: 10px 0 10px 0;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-content: space-between;
 }
 
 .finance {
@@ -94,6 +95,11 @@
   border: 1px solid black;
 }
 
+/* --- SIZE GUIDE MODAL --- */
+.size-guide-modal {
+  overflow-y: scroll;
+}
+
 /* --- MODAL --- */
 .modal {
   position: fixed;
@@ -113,7 +119,7 @@
 
 /* --- CONTENT OF MODAL --- */
 .modal-content {
-  z-index: 2;
+  z-index: 1;
   position: fixed;
   background-color: white;
   width: 50%;
@@ -124,10 +130,7 @@
   padding-right: 20px;
   padding-bottom: 20px;
   border: 1px solid black;
-}
-
-.bag-view {
-  box-sizing: border-box;
+  max-height: calc(100vh - 210px);
 }
 
 .close {
@@ -155,21 +158,19 @@
 .modal-button {
   text-decoration: underline;
   border: none;
-  text-align: center;
-  display: inline-block;
+  text-align: start;
+  display: block;
   color: black;
   background-color: white;
+
 }
 
 .addtobag-modal-button {
   color: white;
   background-color: black;
   height: 40px;
-  overflow: hidden;
-  flex: 1 1 auto;
-  flex-shrink: 3;
   text-overflow: ellipsis;
-  max-width: 500px;
+  align-self: stretch;
 }
 
 .addtobag-modal-button:hover {
@@ -183,13 +184,64 @@
   cursor: pointer;
 }
 
+.checkout-button {
+  height: 40px;
+}
+
+.checkout-button:hover {
+  cursor: pointer;
+}
 
 /* --- IMAGES --- */
 .img {
   height: 250px;
-  justify-content: right;
 }
 
-.img:hover {
+/* --- SIZE OUT OF STOCK MODAL --- */
+.stock-modal {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sign-up-button {
+  height: 40px;
+  background-color: grey;
+  width: fit-content;
+}
+
+.sign-up-button:hover {
   cursor: pointer;
+}
+
+.product-summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.measure-guide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
 }
