@@ -53,7 +53,7 @@ class SizeGuideModal extends React.Component {
           style={{ display: show }}
         />
         <div
-          className="modal-content"
+          className="modal-content size-guide-modal"
           style={{ display: show }}
         >
           <button
@@ -131,8 +131,8 @@ class SizeGuideModal extends React.Component {
           <p>
             Follow these easy steps to get the right size. For the best fit, measure your feet at the end of the day.
           </p>
-          <div>
-            <div>
+          <div className="measure-guide">
+            <div className="steps">
               <ol>
                 <li>
                   Step on a piece of paper with your heel slightly touching a wall behind you.
