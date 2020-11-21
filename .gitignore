@@ -20,3 +20,6 @@ public/bundle.js
 mongoDb.txt
 nodeInstall.txt
 login.sh
+
+## Database Config ##
+config.js

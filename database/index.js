@@ -1,9 +1,8 @@
+import config from './config.js';
+
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/items', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost/items', config);
 
 const itemSchema = mongoose.Schema({
   id: Number,
