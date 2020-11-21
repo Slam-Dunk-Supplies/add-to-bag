@@ -24,7 +24,7 @@ class AddToBag extends React.Component {
   }
 
   getNewItem(id) {
-    Axios.get(`/add_to_bag?id=${id}`)
+    Axios.get(`/api/add_to_bag?id=${id}`)
       .then((res) => {
         this.setState({
           item: res.data,
