@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
-const config = require('./config.js');
 
-mongoose.connect('mongodb://localhost/items', config);
+mongoose.connect('mongodb://localhost/items', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const itemSchema = mongoose.Schema({
   id: Number,
