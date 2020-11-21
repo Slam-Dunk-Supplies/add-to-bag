@@ -12,3 +12,10 @@ public/bundle.js
 
 ## config ##
 .eslintrc.js
+
+## Key Files ##
+*.pem
+
+## Instruction files ##
+mongoDb.txt
+nodeInstall.txt
