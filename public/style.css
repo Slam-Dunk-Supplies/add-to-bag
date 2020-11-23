@@ -192,11 +192,6 @@
   cursor: pointer;
 }
 
-/* --- IMAGES --- */
-.img {
-  height: 250px;
-}
-
 /* --- SIZE OUT OF STOCK MODAL --- */
 .stock-modal {
   display: inline-flex;

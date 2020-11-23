@@ -1,12 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const morgan = require('morgan');
+const compression = require('compression');
 const db = require('../database/index.js');
 
 const app = express();
 const PORT = 3004;
 
 app.use(morgan('dev'));
+app.use(compression());
 app.use(express.static('public'));
 
 app.get('/add_to_bag', (req, res) => {

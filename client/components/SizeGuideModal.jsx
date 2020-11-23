@@ -146,7 +146,7 @@ class SizeGuideModal extends React.Component {
               </ol>
             </div>
             <div>
-              <img className="img" src="https://www.adidas.com/glass/react/2f4232c/assets/img/size-charts/shoes/how-to-measure-shoes.png" alt="Demonstration" />
+              <img className="img" src="https://www.adidas.com/glass/react/2f4232c/assets/img/size-charts/shoes/how-to-measure-shoes.png" alt="Demonstration" width="250px" height="250px" />
             </div>
           </div>
         </div>
