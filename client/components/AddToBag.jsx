@@ -20,11 +20,16 @@ class AddToBag extends React.Component {
   }
 
   componentDidMount() {
-    this.getNewItem(Math.ceil(Math.random() * 100));
+    let itemId = 1;
+    if (window.location.pathname !== '/') {
+      const thePath = window.location.splice('/');
+      itemId = [thePath[1]];
+    }
+    this.getNewItem(itemId);
   }
 
-  getNewItem(id) {
-    Axios.get(`/add_to_bag?id=${id}`)
+  getNewItem(itemId) {
+    Axios.get(`/api/checkout/?id=${itemId}`)
       .then((res) => {
         this.setState({
           item: res.data,

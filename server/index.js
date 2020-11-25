@@ -11,8 +11,9 @@ app.use(morgan('dev'));
 app.use(compression());
 app.use(express.static('public'));
 
-app.get('/add_to_bag', (req, res) => {
+app.get('/api/checkout', (req, res) => {
   const { id } = req.query;
+  console.log(`The listing id is: ${req.query}`);
   console.log(`The request id is ${id}.`);
   db.Item.findOne({ id: [id] }).then((result) => {
     if (result) {
