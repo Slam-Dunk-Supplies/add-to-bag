@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
-// import img from 'process.env.PUBLIC_URL/how-to-measure-shoes.png';
+// import img from './how-to-measure-shoes.png';
 
 class SizeGuideModal extends React.Component {
   constructor(props) {
@@ -146,7 +146,7 @@ class SizeGuideModal extends React.Component {
               </ol>
             </div>
             <div>
-              <img className="img" src="https://www.adidas.com/glass/react/2f4232c/assets/img/size-charts/shoes/how-to-measure-shoes.png" alt="Demonstration" width="250px" height="250px" />
+              <img className="img" alt="Demonstration" width="250px" height="250px" src="./how-to-measure-shoes.png" />
             </div>
           </div>
         </div>

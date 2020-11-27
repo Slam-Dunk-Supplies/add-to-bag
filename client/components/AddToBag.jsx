@@ -15,8 +15,10 @@ class AddToBag extends React.Component {
       item: {
         sizes: [],
       },
+      selectedSize: '',
     };
     this.getNewItem = this.getNewItem.bind(this);
+    this.selectSize = this.selectSize.bind(this);
   }
 
   componentDidMount() {
@@ -37,9 +39,17 @@ class AddToBag extends React.Component {
       }).catch((err) => { console.error(err); });
   }
 
+  selectSize(e) {
+    e.preventDefault();
+    this.setState({
+      selectedSize: e.target.innerHTML,
+    });
+  }
+
   render() {
     const { item } = this.state;
     const { sizes } = item;
+    const { selectedSize } = this.state;
     return (
       <section className="container">
         <div className="description">
@@ -56,15 +66,30 @@ class AddToBag extends React.Component {
             {`$${item.price}`}
           </h4>
           <div>
-            {sizes.map((size) => (
-              <button
-                type="button"
-                className="size-button"
-                key={size}
-              >
-                {size}
-              </button>
-            ))}
+            {sizes.map((size) => {
+              if (selectedSize === size) {
+                return (
+                  <button
+                    type="button"
+                    className="size-button selected"
+                    key={size}
+                    onClick={this.selectSize}
+                  >
+                    {size}
+                  </button>
+                );
+              }
+              return (
+                <button
+                  type="button"
+                  className="size-button"
+                  key={size}
+                  onClick={this.selectSize}
+                >
+                  {size}
+                </button>
+              );
+            })}
           </div>
         </div>
         <div className="mini-container">
@@ -72,7 +97,7 @@ class AddToBag extends React.Component {
           <SizeOutOfStockModal sizes={sizes} />
         </div>
         <div className="mini-container">
-          <AddToBagModal item={item} />
+          <AddToBagModal item={item} size={selectedSize} />
           <button
             type="button"
             className="heart"

@@ -34,6 +34,7 @@ class AddToBagModal extends React.Component {
     const color = `Color: ${item.color}`;
     const total = `Total Product Cost: $${item.price}`;
     const grandTotal = `Total $${item.price}`;
+    const { size } = this.props;
     return (
       <div>
         <button
@@ -73,8 +74,10 @@ class AddToBagModal extends React.Component {
               <div>
                 {color}
               </div>
-              <div>
-                Size: unknown
+              <div className="sizeInBag">
+                {/* eslint-disable-next-line no-trailing-spaces */}
+                Size: 
+                {size}
               </div>
               <div>
                 Quantity: 1
@@ -112,6 +115,7 @@ class AddToBagModal extends React.Component {
 
 AddToBagModal.propTypes = {
   item: PropTypes.objectOf(PropTypes.string).isRequired,
+  size: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default AddToBagModal;
