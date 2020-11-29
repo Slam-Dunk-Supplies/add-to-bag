@@ -9,11 +9,10 @@ const PORT = 3004;
 
 app.use(morgan('dev'));
 app.use(compression());
-app.use(express.static('public'));
+app.use('/:id', express.static('public'));
 
-app.get('/api/checkout', (req, res) => {
-  const { id } = req.query;
-  console.log(`The listing id is: ${req.query}`);
+app.get('/api/checkout/:id', (req, res) => {
+  const { id } = req.params;
   console.log(`The request id is ${id}.`);
   db.Item.findOne({ id: [id] }).then((result) => {
     if (result) {
@@ -22,6 +21,10 @@ app.get('/api/checkout', (req, res) => {
       res.send(404);
     }
   }).catch((err) => console.error(err));
+});
+
+app.get('/', (req, res) => {
+  res.redirect('localhost:3004/1/');
 });
 
 app.listen(PORT, () => {
