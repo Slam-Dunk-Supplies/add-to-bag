@@ -6,8 +6,8 @@ const items = [];
 const sizeOne = ['s', 'm', 'l'];
 const sizeTwo = ['xs', 's', 'm'];
 const sizeThree = ['l', 'xl', 'xxl'];
-const sizeFour = [10, 11, 12, 14, 16];
-const sizeFive = [6, 7, 8, 9, 10, 11, 12];
+const sizeFour = ['10', '11', '12', '14', '16'];
+const sizeFive = ['6', '7', '8', '9', '10', '11', '12'];
 
 for (let i = 1; i < 101; i++) {
   const item = {
