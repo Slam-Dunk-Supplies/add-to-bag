@@ -24,14 +24,14 @@ class AddToBag extends React.Component {
   componentDidMount() {
     let itemId = 1;
     if (window.location.pathname !== '/') {
-      const thePath = window.location.splice('/');
+      const thePath = window.location.pathname.split('/');
       itemId = [thePath[1]];
     }
     this.getNewItem(itemId);
   }
 
   getNewItem(itemId) {
-    Axios.get(`/api/checkout/?id=${itemId}`)
+    Axios.get(`/api/checkout/${itemId}`)
       .then((res) => {
         this.setState({
           item: res.data,
